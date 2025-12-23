@@ -1,0 +1,8 @@
+<group name="windows, identity, lateral_movement,">
+  <rule id="100001" level="12">
+    <if_sid>60106</if_sid> <field name="win.eventdata.logonType">10</field> <field name="win.eventdata.targetUserName">^Admin|^Administrator|^Adm-</field>
+    <description>Critical: Privileged Account RDP Logon Detected - Potential Lateral Movement</description>
+    <mitre>
+      <id>T1078.002</id> <id>T1021.001</id> </mitre>
+  </rule>
+</group>
